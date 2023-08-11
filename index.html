@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bsnesus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="speak();">Init Audio</button>
+    <div class="container">
+        <h1>Me voice Assistant</h1>
+        <form onsubmit="
+            event.preventDefault();
+            conversationUserAdd(document.getElementById('input-text').value);
+            openai_test();
+        ">
+            <input type="text" id="input-text" placeholder="say seeee">
+            <button id="submit-button">Submit</button>    
+        </form>
+        
+        <div id="chat-container"></div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
